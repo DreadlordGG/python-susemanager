@@ -1,7 +1,5 @@
-#!/usr/bin/env python
 import xmlrpclib
 import sys
-
 class auth:
 
     def __init__(self, url, username, password):
@@ -25,32 +23,6 @@ class auth:
     def logout(self):
         try:
             self.client.auth.logout(self.session)
-            print ("Login Successfull")
+            print ("Logout Successfull")
         except (xmlrpclib.ProtocolError, xmlrpclib.Fault) as error:
             print ("Unable to logout to SUSE Manager server:: %s" % str(error))
-
-class system:
-    def __init__(self, client, session):
-        self.session = session
-        self.client = client
-
-    def listActivationKeys(self, pid):
-        return self.client.system.listActivationKeys(self.session, sid)
-
-    @property
-    def listActiveSystems(self):
-        return self.client.system.listActiveSystems(self.session)
-
-    def listActiveSystemsDetails(self, *args):
-        return self.client.system.listActiveSystemsDetails(self.session, args)
-    @property
-    def listSystems(self):
-        return self.client.system.listSystems(self.session)
-
-    def listSystemsWithPackage(self, pid):
-        return self.client.system.listSystemsWithPackage(self.session, pid)
-
-if __name__ == "__main__":
-        pass
-
-

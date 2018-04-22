@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='python-susemanager',
-      version='0.2a',
+      version='0.14a',
       description='Python module for SuSE Manager API',
       url='https://github.com/DreadlordGG/python-susemanager',
       download_url='https://pypi.python.org/pypi/python-susemanager',
@@ -14,7 +14,6 @@ setup(name='python-susemanager',
                    'Programming Language :: Python :: 2.6',
                    'Programming Language :: Python :: 2.7'],
       packages=['susemanager'],
-      package_dir={'susemanager': 'susemanager'},
       keywords='Python module for SuSE Manager API',
       python_requires='>=3',
       zip_safe=False)
