@@ -1,21 +1,21 @@
 import xmlrpclib
-class System:
+class list:
 	def __init__(self, client, session):
 	    self.session = session
 	    self.client = client
 
-	def listActivationKeys(self, pid):
+	def ActivationKeys(self, pid):
 	    return self.client.system.listActivationKeys(self.session, sid)
 
 	@property
-	def listActiveSystems(self):
+	def ActiveSystems(self):
 	    return self.client.system.listActiveSystems(self.session)
 
-	def listActiveSystemsDetails(self, *args):
+	def ActiveSystemsDetails(self, *args):
 	    return self.client.system.listActiveSystemsDetails(self.session, args)
 	@property
-	def listSystems(self):
+	def Systems(self):
 	    return self.client.system.listSystems(self.session)
 
-	def listSystemsWithPackage(self, pid):
+	def SystemsWithPackage(self, pid):
 	    return self.client.system.listSystemsWithPackage(self.session, pid)
