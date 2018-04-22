@@ -23,6 +23,6 @@ class auth:
     def logout(self):
         try:
             self.client.auth.logout(self.session)
-            print ("Logout Successfull")
+            print ("Login Successfull")
         except (xmlrpclib.ProtocolError, xmlrpclib.Fault) as error:
             print ("Unable to logout to SUSE Manager server:: %s" % str(error))
